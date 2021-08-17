@@ -20,4 +20,8 @@ public class HelloController {
         return "hello-mvc";
     }
 
+    public void hello(){
+        
+    }
+
 }
