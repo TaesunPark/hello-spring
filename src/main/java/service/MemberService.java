@@ -1,16 +1,20 @@
 package service;
 
 import domain.Member;
-import repository.MemoryMemberRepository;
+import repository.MemberRepository;
 
 import java.util.List;
 import java.util.Optional;
 
 public class MemberService {
 
-    private final MemoryMemberRepository repository = new MemoryMemberRepository();
+    private final MemberRepository repository;
 
-     /**
+    public MemberService(MemberRepository repository) {
+        this.repository = repository;
+    }
+
+    /**
      *  회원 가입
      * */
     public Long join(Member member){
