@@ -8,12 +8,11 @@ import hello.hellospring.repository.MemberRepository;
 import java.util.List;
 import java.util.Optional;
 
-@Service
+
 public class MemberService {
 
     private final MemberRepository repository;
 
-    @Autowired
     public MemberService(MemberRepository repository) {
         this.repository = repository;
     }
