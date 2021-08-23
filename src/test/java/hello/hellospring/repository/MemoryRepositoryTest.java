@@ -1,14 +1,12 @@
-package repository;
+package hello.hellospring.repository;
 
 import domain.Member;
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
 
 public class MemoryRepositoryTest {
 

@@ -1,11 +1,11 @@
 package service;
 
 import domain.Member;
-import org.assertj.core.api.Assertions;
+import hello.hellospring.service.MemberService;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import repository.MemoryMemberRepository;
+import hello.hellospring.repository.MemoryMemberRepository;
 
 import static org.assertj.core.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.*;
