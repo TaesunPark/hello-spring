@@ -1,9 +1,13 @@
 package singleton;
 
+import hello.core.AppConfig;
+import member.MemberService;
 import org.assertj.core.api.Assertions;
 import org.assertj.core.api.ObjectAssert;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class SingletonService {
 
@@ -27,5 +31,16 @@ public class SingletonService {
         SingletonService singletonService1 = getInstance();
         SingletonService singletonService2 = getInstance();
         Assertions.assertThat(singletonService1).isSameAs(singletonService2);
+    }
+
+    @Test
+    @DisplayName("스프링 컨테이너와 싱글톤")
+    void springContainer(){
+
+        ApplicationContext ac = new AnnotationConfigApplicationContext(AppConfig.class);
+        // 객체를 계속 생성함.
+        MemberService memberService1 = ac.getBean("memberService", MemberService.class);
+        MemberService memberService2 = ac.getBean("memberService", MemberService.class);
+        Assertions.assertThat(memberService1).isSameAs(memberService2);
     }
 }
