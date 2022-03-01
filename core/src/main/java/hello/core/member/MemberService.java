@@ -1,6 +1,4 @@
-package member;
-
-import org.springframework.stereotype.Component;
+package hello.core.member;
 
 public interface MemberService {
 

@@ -1,7 +1,7 @@
 package hello.core.discount;
 
-import member.Grade;
-import member.Member;
+import hello.core.member.Grade;
+import hello.core.member.Member;
 import org.springframework.stereotype.Component;
 
 @Component

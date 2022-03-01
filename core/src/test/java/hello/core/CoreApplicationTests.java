@@ -1,7 +1,7 @@
 package hello.core;
 
 import hello.core.order.OrderService;
-import member.MemberService;
+import hello.core.member.MemberService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
